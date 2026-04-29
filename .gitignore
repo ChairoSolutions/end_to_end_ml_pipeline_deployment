@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data / artifacts
+data/
+artifacts/
+
+# Models
+*.pkl
+*.joblib
+
+# Env
+.env
+ds-env/
+venv/
