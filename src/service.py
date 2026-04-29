@@ -22,7 +22,7 @@ def get_model(model_path: str | Path = MODEL_PATH) -> Pipeline:
 
 def predict(features: Dict[str, Any], model: Pipeline) -> dict:
     frame = pd.DataFrame([features])
-    prediction = model.predict(frame)[0]
+    prediction = int(model.predict(frame)[0])
     response = {"prediction": prediction}
     if hasattr(model, "predict_proba"):
         classes = list(model.classes_)
